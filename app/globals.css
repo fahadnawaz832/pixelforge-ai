@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+
+body {
+  background: radial-gradient(1200px 600px at 80% -10%, rgba(124,92,255,0.15), transparent),
+              radial-gradient(1000px 500px at -10% 110%, rgba(124,92,255,0.08), transparent),
+              #0a0a0f;
+  color: #e9e9f2;
+}
+
+.glass {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(16px);
+}
+
+.btn-primary {
+  @apply bg-accent hover:bg-accent-soft transition-colors text-white font-medium rounded-xl px-5 py-2.5 shadow-glow disabled:opacity-40 disabled:cursor-not-allowed;
+}
+
+.btn-secondary {
+  @apply glass hover:bg-white/10 transition-colors text-white/90 font-medium rounded-xl px-5 py-2.5;
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 8px; }
